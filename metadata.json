@@ -1,0 +1,7 @@
+{
+  "name": "VerifyGlobal2 - Salt Edge Financial Hub",
+  "description": "A secure dashboard for managing financial data via Salt Edge API, featuring customer management, bank connection workflows, and account overview.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
