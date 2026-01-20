@@ -6,7 +6,8 @@
 
 This contains everything you need to run your app locally.
 
-View your app in AI Studio: https://ai.studio/apps/drive/1-VYKXj3nZdR7jupBzzfIvupX7n3tWQ6D
+# VerifyGlobal2
+<!-- Triggering a fresh deployment -->
 
 ## Run Locally
 
