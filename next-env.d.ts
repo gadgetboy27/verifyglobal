@@ -1,5 +1,6 @@
-// Fixed: Removed triple-slash references that were causing "Cannot find type definition file" errors.
-// These directives were failing because the 'next' package is not correctly resolved in the current environment.
+/// <reference types="next" />
+/// <reference types="next/image-types/global" />
+import "./.next/types/routes.d.ts";
 
 // NOTE: This file should not be edited
-// see https://nextjs.org/docs/basic-features/typescript for more information.
+// see https://nextjs.org/docs/app/api-reference/config/typescript for more information.
