@@ -50,17 +50,19 @@ curl http://localhost:3000/api/saltedge/transactions
 ## 🎨 Components to Add to Dashboard
 
 ### Data Display Component
-```tsx
-import SaltEdgeDataDisplay from './components/SaltEdgeDataDisplay';
 
-<SaltEdgeDataDisplay />
+```tsx
+import SaltEdgeDataDisplay from "./components/SaltEdgeDataDisplay";
+
+<SaltEdgeDataDisplay />;
 ```
 
 ### API Debugger Component
-```tsx
-import ApiDebugger from './components/ApiDebugger';
 
-<ApiDebugger />
+```tsx
+import ApiDebugger from "./components/ApiDebugger";
+
+<ApiDebugger />;
 ```
 
 ---
@@ -78,6 +80,7 @@ SALTEDGE_SECRET=your_secret
 ## ✅ Response Format
 
 **Success (200):**
+
 ```json
 {
   "data": [
@@ -91,6 +94,7 @@ SALTEDGE_SECRET=your_secret
 ```
 
 **Error (500):**
+
 ```json
 {
   "error": "Error message here"
@@ -101,12 +105,12 @@ SALTEDGE_SECRET=your_secret
 
 ## 🐛 Troubleshooting
 
-| Problem | Solution |
-|---------|----------|
-| 401 Error | Check API credentials |
-| Failed to fetch | Ensure server is running on :3000 |
-| No data | Enable demo mode or check env vars |
-| Slow responses | Check network, try demo mode |
+| Problem         | Solution                           |
+| --------------- | ---------------------------------- |
+| 401 Error       | Check API credentials              |
+| Failed to fetch | Ensure server is running on :3000  |
+| No data         | Enable demo mode or check env vars |
+| Slow responses  | Check network, try demo mode       |
 
 ---
 
