@@ -4,7 +4,8 @@
  * Run with: npx ts-node test-saltedge-api.ts
  */
 
-import fetch from "node-fetch";
+// Use Node.js built-in fetch (available in Node 18+)
+// No import needed, fetch is global
 
 const BASE_URL = "http://localhost:3000/api/saltedge";
 
