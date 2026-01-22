@@ -1,7 +1,9 @@
 /**
- * Quick Salt Edge API Test
+ * Quick Salt Edge API v6 Test
  * Tests a direct call to Salt Edge API through your backend
  * Run with: npx ts-node test-api-call.ts
+ *
+ * UPDATED FOR V6: V5 is deprecated, deadline September 30, 2025
  */
 
 async function testSaltEdgeApi() {

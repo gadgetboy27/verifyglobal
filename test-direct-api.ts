@@ -1,7 +1,9 @@
 /**
- * Direct Salt Edge API Call Test
+ * Direct Salt Edge API v6 Call Test
  * This calls Salt Edge API directly (server-side)
  * Run with: npx ts-node test-direct-api.ts
+ *
+ * UPDATED FOR V6: V5 is deprecated, deadline September 30, 2025
  */
 
 import * as fs from "fs";
@@ -35,11 +37,11 @@ async function testDirectSaltEdgeApi() {
   console.log(`   SALTEDGE_APP_ID: ${APP_ID ? "✅ Set" : "❌ Missing"}`);
   console.log(`   SALTEDGE_SECRET: ${SECRET ? "✅ Set" : "❌ Missing"}\n`);
 
-  const API_BASE = "https://www.saltedge.com/api/v5";
+  const API_BASE = "https://www.saltedge.com/api/v6";
 
   try {
     // Test 1: List Customers
-    console.log("📡 Test 1: GET /customers");
+    console.log("📡 Test 1: GET /customers (v6)");
     console.log("━".repeat(70));
 
     const customersRes = await fetch(`${API_BASE}/customers`, {
@@ -66,7 +68,7 @@ async function testDirectSaltEdgeApi() {
 
     // Test 2: List Accounts
     console.log("\n" + "━".repeat(70));
-    console.log("📡 Test 2: GET /accounts");
+    console.log("📡 Test 2: GET /accounts (v6)");
     console.log("━".repeat(70));
 
     const accountsRes = await fetch(`${API_BASE}/accounts`, {
@@ -93,7 +95,7 @@ async function testDirectSaltEdgeApi() {
 
     // Test 3: List Connections
     console.log("\n" + "━".repeat(70));
-    console.log("📡 Test 3: GET /connections");
+    console.log("📡 Test 3: GET /connections (v6)");
     console.log("━".repeat(70));
 
     const connectionsRes = await fetch(`${API_BASE}/connections`, {
@@ -121,14 +123,18 @@ async function testDirectSaltEdgeApi() {
     }
 
     console.log("\n" + "═".repeat(70));
-    console.log("✨ Direct API Tests Complete!");
+    console.log("✨ V6 Direct API Tests Complete!");
     console.log("═".repeat(70) + "\n");
+    console.log("📌 API Version: V6 (V5 deprecated, deadline Sept 30, 2025)\n");
   } catch (error: any) {
     console.error("❌ Error making API call:", error.message);
     console.log("\n💡 Troubleshooting:");
     console.log("   1. Verify SALTEDGE_APP_ID and SALTEDGE_SECRET are correct");
-    console.log("   2. Check Salt Edge API is accessible");
-    console.log("   3. Verify your API credentials are still valid\n");
+    console.log(
+      "   2. Check that you're using SERVICE API KEYS (not App API keys)",
+    );
+    console.log("   3. Check Salt Edge API is accessible");
+    console.log("   4. Ensure you're on V6 (V5 credentials may not work)\n");
   }
 }
 
